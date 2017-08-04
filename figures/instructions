@@ -1,0 +1,2 @@
+If your document has figures included (it should) then they should have been placed in the figure/ 
+directory by default (unless you overrode the default). Add and commit the figure/ directory to your git repository.

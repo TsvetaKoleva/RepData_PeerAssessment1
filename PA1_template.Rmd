@@ -130,11 +130,16 @@ hist(stepsPerDayNA$nsteps, breaks= 18, xlab="Total Steps", main="Total Steps Per
 hist(stepsPerDay$nsteps, breaks= 18, xlab="Total Steps", main="Total Steps Per Day", col="lightblue", add=T)
 ```
 
+
 ```{r}
 meanMedianStepsNA<-stepsPerDayNA%>%
     summarise(meanSteps=mean(nsteps, na.rm=TRUE), medianSteps=median(nsteps, na.rm=TRUE))%>%
     print(meanMedianStepsNA)
+diffMM<-round(meanMedianStepsNA-meanMedianSteps, 2)
+diffMM
 ```
+
+The differences between the mean and median of the imputed and original data are : `r diffMM`.
 
 ###Are there differences in activity patterns between weekdays and weekends?
 
